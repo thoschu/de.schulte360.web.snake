@@ -37,7 +37,7 @@ app.get('/assets/images/gameover.png', function (req, res) {
     res.sendFile(__dirname + '/assets/images/gameover.png');
 });
 app.get('/assets/images/favicon.png', function (req, res) {
-    res.sendFile(__dirname + '/assets/images/snake.ico');
+    res.sendFile(__dirname + '/assets/images/favicon.png');
 });
 app.get('/assets/images/key-left.png', function (req, res) {
     res.sendFile(__dirname + '/assets/images/key-left.png');
