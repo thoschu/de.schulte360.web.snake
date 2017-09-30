@@ -36,6 +36,9 @@ app.get('/assets/images/apple.png', function (req, res) {
 app.get('/assets/images/gameover.png', function (req, res) {
     res.sendFile(__dirname + '/assets/images/gameover.png');
 });
+app.get('/assets/images/snake.ico', function (req, res) {
+    res.sendFile(__dirname + '/assets/images/snake.ico');
+});
 
 io.on('connection', function (socket) {
     io.emit('this', {will: 'be received by everyone'});
