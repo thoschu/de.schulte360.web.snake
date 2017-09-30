@@ -36,8 +36,20 @@ app.get('/assets/images/apple.png', function (req, res) {
 app.get('/assets/images/gameover.png', function (req, res) {
     res.sendFile(__dirname + '/assets/images/gameover.png');
 });
-app.get('/assets/images/snake.ico', function (req, res) {
+app.get('/assets/images/favicon.png', function (req, res) {
     res.sendFile(__dirname + '/assets/images/snake.ico');
+});
+app.get('/assets/images/key-left.png', function (req, res) {
+    res.sendFile(__dirname + '/assets/images/key-left.png');
+});
+app.get('/assets/images/key-up.png', function (req, res) {
+    res.sendFile(__dirname + '/assets/images/key-up.png');
+});
+app.get('/assets/images/key-down.png', function (req, res) {
+    res.sendFile(__dirname + '/assets/images/key-down.png');
+});
+app.get('/assets/images/key-right.png', function (req, res) {
+    res.sendFile(__dirname + '/assets/images/key-right.png');
 });
 
 io.on('connection', function (socket) {
