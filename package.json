@@ -1,0 +1,30 @@
+{
+  "name": "de.schulte360.web.snake",
+  "version": "1.0.0",
+  "description": "Game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoschu/de.schulte360.web.snake.git"
+  },
+  "author": "Tom S.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thoschu/de.schulte360.web.snake/issues"
+  },
+  "homepage": "https://github.com/thoschu/de.schulte360.web.snake#readme",
+  "dependencies": {
+    "express": "4.10.2",
+    "js-csp": "^1.0.1",
+    "ramda": "^0.24.1",
+    "socket.io": "1.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-buddyjs": "^0.1.2"
+  }
+}
