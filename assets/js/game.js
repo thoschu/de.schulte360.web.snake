@@ -15,7 +15,7 @@ var Game = {
 
         // By setting up global variables in the create function, we initialise them on game start.
         // We need them to be globally available so that the update function can alter them.
-
+        ////////////////////////////////////////////////////////////////////////////////////////////////
         snake = [];                     // This will work as a stack, containing the parts of our snake
         apple = {};                     // An object for the apple;
         squareSize = 15;                // The length of a side of the squares. Our image is 15x15 pixels.
@@ -36,7 +36,6 @@ var Game = {
             snake[i] = game.add.sprite(150+i*squareSize, 150, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
         }
 
-
         // Genereate the first apple.
         this.generateApple();
 
@@ -56,7 +55,6 @@ var Game = {
     update: function() {
 
         // Handle arrow key presses, while not allowing illegal direction changes that will kill the player.
-
         if (cursors.right.isDown && direction!='left')
         {
             new_direction = 'right';
@@ -91,9 +89,7 @@ var Game = {
         // making the snake move faster.
         if (updateDelay % (10 - speed) == 0) {
 
-
             // Snake movement
-
             var firstCell = snake[snake.length - 1],
                 lastCell = snake.shift(),
                 oldLastCellx = lastCell.x,
@@ -105,9 +101,7 @@ var Game = {
                 new_direction = null;
             }
 
-
             // Change the last cell's coordinates relative to the head of the snake, according to the direction.
-
             if(direction == 'right'){
 
                 lastCell.x = firstCell.x + 15;
@@ -126,7 +120,6 @@ var Game = {
                 lastCell.y = firstCell.y + 15;
             }
 
-
             // Place the last cell in the front of the stack.
             // Mark it as the first cell.
 
@@ -134,8 +127,6 @@ var Game = {
             firstCell = lastCell;
 
             // End of snake movement.
-
-
 
             // Increase length of snake if an apple had been eaten.
             // Create a block in the back of the snake with the old position of the previous last block (it has moved now along with the rest of the snake).
@@ -153,8 +144,6 @@ var Game = {
             // Check with collision with wall. Parameter is the head of the snake.
             this.wallCollision(firstCell);
         }
-
-
     },
 
     generateApple: function(){
@@ -191,10 +180,8 @@ var Game = {
 
                 // Refresh scoreboard.
                 scoreTextValue.text = score.toString();
-
             }
         }
-
     },
 
     selfCollision: function(head) {
@@ -207,20 +194,15 @@ var Game = {
                 game.state.start('Game_Over');
             }
         }
-
     },
 
     wallCollision: function(head) {
 
         // Check if the head of the snake is in the boundaries of the game field.
-
         if(head.x >= 600 || head.x < 0 || head.y >= 450 || head.y < 0){
-
 
             // If it's not in, we've hit a wall. Go to game over screen.
             game.state.start('Game_Over');
         }
-
     }
-
 };

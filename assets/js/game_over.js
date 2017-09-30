@@ -14,14 +14,11 @@ var Game_Over = {
         // Last Score Info.
         game.add.text(235, 350, "LAST SCORE", { font: "bold 16px sans-serif", fill: "#46c0f9", align: "center"});
         game.add.text(350, 348, score.toString(), { font: "bold 20px sans-serif", fill: "#fff", align: "center" });
-
     },
 
     startGame: function () {
 
         // Change the state to the actual game.
         this.state.start('Game');
-
     }
-
 };
