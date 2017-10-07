@@ -21,15 +21,12 @@
   "homepage": "https://github.com/thoschu/de.schulte360.web.snake#readme",
   "dependencies": {
     "express": "4.10.2",
-    "fs": "0.0.1-security",
     "js-csp": "^1.0.1",
-    "net": "^1.0.2",
     "ramda": "^0.24.1",
     "socket.io": "1.2.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-buddyjs": "^0.1.2",
-    "webpack": "^3.6.0"
+    "grunt-buddyjs": "^0.1.2"
   }
 }
