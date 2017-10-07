@@ -2,6 +2,7 @@ const PORT = 3300;
 
 let app = require('express')(),
     http = require('http').Server(app),
+    util = require('util'),
     io = require('socket.io')(http);
 
 app.get('/', function (req, res) {
@@ -66,5 +67,6 @@ io.on('connection', function (socket) {
 });
 
 http.listen(PORT, function () {
+    console.log(util.inspect(app));
     console.log('listening on *:' + PORT);
 });
