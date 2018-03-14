@@ -1,0 +1,11 @@
+version: '2'
+services:
+  snake:
+    scale: 2
+    start_on_create: true
+    lb_config:
+      certs: []
+      port_rules:
+      - hostname: snake.*
+        path: /
+        target_port: 3300

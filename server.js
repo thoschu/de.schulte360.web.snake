@@ -67,6 +67,6 @@ io.on('connection', function (socket) {
 });
 
 http.listen(PORT, function () {
-    console.log(util.inspect(app));
+    //console.log(util.inspect(app));
     console.log('listening on *:' + PORT);
 });
