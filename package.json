@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "start:detached": "nohup node server.js &",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,13 +19,13 @@
   },
   "homepage": "https://github.com/thoschu/de.schulte360.web.snake#readme",
   "dependencies": {
-    "express": "4.10.2",
+    "express": "^4.16.4",
     "js-csp": "^1.0.1",
     "ramda": "^0.24.1",
-    "socket.io": "1.2.0"
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.3",
     "grunt-buddyjs": "^0.1.2"
   }
 }
