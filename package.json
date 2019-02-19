@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:port:u": "PORT=9999 npm start",
+    "start:port:u:7": "PORT=7777 npm start",
+    "start:port:u:9": "PORT=9999 npm start",
     "start:port:w": "set PORT=9999&&npm start",
     "start:detached": "nohup node server.js &",
     "test": "echo \"Error: no test specified\" && exit 1"
