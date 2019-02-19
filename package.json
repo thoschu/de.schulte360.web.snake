@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:detached:8": "nohup npm start &",
-    "start:detached:7": "nohup PORT=7777 npm start &",
-    "start:detached:9": "nohup PORT=9999 npm start &",
-    "start:port:windows": "set PORT=9999&&npm start",
-    "start:detached:all": "concurrently \"npm run start:detached:8\" \"npm run start:detached:7\" \"npm run start:detached:9\"",
+    "start:u:7": "PORT=8888 npm start",
+    "start:u:8": "PORT=8888 npm start",
+    "start:u:9": "PORT=9999 npm start",
+    "start:w:6": "set PORT=6666&&npm start",
+    "start:detached:all": "nohup concurrently \"npm run start:u:7\" \"npm run start:u:8\" \"npm run start:u:9\" &",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
