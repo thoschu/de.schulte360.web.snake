@@ -1,4 +1,4 @@
-const PORT = 8888;
+const PORT = process.env.PORT || 8888;
 
 let app = require('express')(),
     http = require('http').Server(app),
