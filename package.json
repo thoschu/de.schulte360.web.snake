@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:port:u:7": "PORT=7777 npm start",
-    "start:port:u:9": "PORT=9999 npm start",
-    "start:port:w": "set PORT=9999&&npm start",
-    "start:detached": "nohup node server.js &",
-    "start:detached:all": "nohup npm start && npm run start:port:u:7 && npm run start:port:u:9 &",
+    "start:detached:8": "nohup npm start &",
+    "start:detached:7": "nohup PORT=7777 npm start &",
+    "start:detached:9": "nohup PORT=9999 npm start &",
+    "start:port:windows": "set PORT=9999&&npm start",
+    "start:detached:all": "concurrently \"npm run start:detached:8\" \"npm run start:detached:7\" \"npm run start:detached:9\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/thoschu/de.schulte360.web.snake#readme",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "js-csp": "^1.0.1",
     "ramda": "^0.24.1",
