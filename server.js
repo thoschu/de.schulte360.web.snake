@@ -1,6 +1,4 @@
-const PORT = process.env.PORT || 8888;
-
-console.log(typeof PORT);
+const PORT = process.env.PORT || '8888';
 
 let app = require('express')(),
     http = require('http').Server(app),
@@ -10,15 +8,15 @@ let app = require('express')(),
 app.get('/', function (req, res) {
     console.log(PORT);
     switch(PORT) {
-        case 9999 || '9999':
+        case '9999':
             console.log('A');
             res.sendFile(__dirname + '/assets/markup/9999/index.html');
             break;
-        case 8888 || '8888':
+        case '8888':
             console.log('B');
             res.sendFile(__dirname + '/assets/markup/8888/index.html');
             break;
-        case 7777 || '7777' :
+        case '7777' :
             console.log('C');
         default:
             console.log('X');
