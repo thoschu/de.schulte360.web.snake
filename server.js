@@ -6,6 +6,7 @@ let app = require('express')(),
     io = require('socket.io')(http);
 
 app.get('/', function (req, res) {
+    console.log(PORT);
     switch(PORT) {
         case 9999:
             res.sendFile(__dirname + '/assets/markup/9999/index.html');
