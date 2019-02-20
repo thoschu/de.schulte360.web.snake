@@ -5,21 +5,26 @@ let app = require('express')(),
     util = require('util'),
     io = require('socket.io')(http);
 
+
+
 app.get('/', function (req, res) {
-    console.log(PORT);
+
+    function sendMarkup(port)) {
+        console.log(`/assets/markup/${port}/index.html`);
+        //res.sendFile(__dirname + `/assets/markup/${port}/index.html`);
+    };
+
+    sendMarkup(PORT);
+
     switch(PORT) {
         case '9999':
-            console.log('A');
             res.sendFile(__dirname + '/assets/markup/9999/index.html');
             break;
         case '8888':
-            console.log('B');
             res.sendFile(__dirname + '/assets/markup/8888/index.html');
             break;
         case '7777' :
-            console.log('C');
         default:
-            console.log('X');
             res.sendFile(__dirname + '/assets/markup/7777/index.html');
     }
 });
