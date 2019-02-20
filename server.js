@@ -5,11 +5,9 @@ let app = require('express')(),
     util = require('util'),
     io = require('socket.io')(http);
 
-
-
 app.get('/', function (req, res) {
 
-    function sendMarkup(port)) {
+    function sendMarkup(port) {
         console.log(`/assets/markup/${port}/index.html`);
         //res.sendFile(__dirname + `/assets/markup/${port}/index.html`);
     };
