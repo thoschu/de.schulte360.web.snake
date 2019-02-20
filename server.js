@@ -6,25 +6,11 @@ let app = require('express')(),
     io = require('socket.io')(http);
 
 app.get('/', function (req, res) {
-
     function sendMarkup(port) {
-        console.log(`/assets/markup/${port}/index.html`);
-        //res.sendFile(__dirname + `/assets/markup/${port}/index.html`);
+        res.sendFile(__dirname + `/assets/markup/${port}/index.html`);
     };
 
     sendMarkup(PORT);
-
-    switch(PORT) {
-        case '9999':
-            res.sendFile(__dirname + '/assets/markup/9999/index.html');
-            break;
-        case '8888':
-            res.sendFile(__dirname + '/assets/markup/8888/index.html');
-            break;
-        case '7777' :
-        default:
-            res.sendFile(__dirname + '/assets/markup/7777/index.html');
-    }
 });
 
 app.get('/assets/js/phaser.min.js', function (req, res) {
