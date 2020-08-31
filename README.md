@@ -1,6 +1,5 @@
-# de.schulte360.web.snake
 Game
 
-https://game.server360.io/
+# ch.techstack.web.snake
 
-http://server360.io/snake/
+## https://techstack.ch/snake/
