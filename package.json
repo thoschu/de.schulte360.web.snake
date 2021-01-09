@@ -27,7 +27,7 @@
     "express": "^4.16.4",
     "js-csp": "^1.0.1",
     "ramda": "^0.24.1",
-    "socket.io": "^2.2.0"
+    "socket.io": "^3.0.0"
   },
   "devDependencies": {
     "grunt": "^1.0.3",
